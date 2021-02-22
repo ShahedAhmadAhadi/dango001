@@ -1,2 +1,2 @@
-# dango001
+# django001
 Starting django
