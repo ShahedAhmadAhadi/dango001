@@ -7,16 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>This is the header</h1>
-    <p>{% for item in item_lst %}
-        <ul>
-            <li> 
-                <a href="{{item.id}}">{{item.id}} {{item.item_name}}</a>
-                
-            </li>
-        </ul>
-        {% endfor %}</p>
-
     <h1>{{item.item_name}}</h1>
     <h2>{{item.item_desc}}</h2>
     <h2>{{item.item_price}}</h2>
