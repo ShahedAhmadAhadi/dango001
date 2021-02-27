@@ -17,5 +17,10 @@
             </li>
         </ul>
         {% endfor %}</p>
+        {% if messages %}
+            {% for message in messages %}
+                {{ message }}
+            {% endfor %}
+        {% endif %}
 </body>
 </html>
