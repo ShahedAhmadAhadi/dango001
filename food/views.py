@@ -28,7 +28,7 @@ def detail(request, item_id):
     context = {
         'item': item_
     }
-    return render(request, 'food/index.html', context)
+    return render(request, 'food/detail.html', context)
 
 
 def create_item(request):
@@ -52,7 +52,7 @@ def update_item(request, id):
 
 
 def delete_item(request, id):
-    item = item.objects.get(id= id)
+    item = Item.objects.get(id= id)
     if request.method == "POST":
         item.delete()
         return redirect('food:index')
