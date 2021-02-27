@@ -15,7 +15,6 @@ from .form import Item_form
 #         'item_lst': item_lst,
 #     }
 #     return HttpResponse(template.render(context, request))
-
 def index(request):
     item_lst = Item.objects.all()
     # template = loader.get_template('./food/index.html')
