@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.template import loader
 from .models import Item
 from .form import Item_form
+from django.views.generic.list import ListView
 
 # Create your views here.
 
@@ -22,6 +23,13 @@ def index(request):
         'item_lst': item_lst,
     }
     return render(request, './food/index.html', context)
+
+class IndexClassView(ListView):
+    model = Item
+    template_name = 'food/index.html'
+    # queryset = Item.objects.all()
+    context_object_name = 'item_lst'
+
 
 def detail(request, item_id):
     item_ = Item.objects.get(pk=item_id)
